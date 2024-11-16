@@ -1,0 +1,18 @@
+# ninja log v5
+424	5865	7534528019999367	advanced_samples/common_native/CMakeFiles/common-native-gles3.dir/src/ETCHeader.cpp.o	75043bbf02d1176d
+482	9416	7534528055519276	advanced_samples/common_native/CMakeFiles/common-native-gles3.dir/src/Timer.cpp.o	fdf7da2642940a68
+234	18868	7534528149007420	advanced_samples/common_native/CMakeFiles/common-native-gles3.dir/src/Shader.cpp.o	c2ef9c42e18db002
+470	19474	7534528150219227	advanced_samples/common_native/CMakeFiles/common-native-gles3.dir/src/JavaClass.cpp.o	5392e9a81069fbeb
+344	19966	7534528161017522	advanced_samples/common_native/CMakeFiles/common-native-gles3.dir/src/Matrix.cpp.o	ecf04d3b6c5698e8
+19967	21691	7534528178209448	advanced_samples/Translucency/CMakeFiles/Translucency.dir/jni/common/timer.cpp.o	bd7d8253ff90df51
+19477	54950	7534528501796734	advanced_samples/Translucency/CMakeFiles/Translucency.dir/jni/main.cpp.o	1ec5658ee202ad4f
+477	54961	7534528508694033	advanced_samples/common_native/CMakeFiles/common-native-gles3.dir/src/AndroidPlatform.cpp.o	3fa99d56a39101a8
+2	54996	7534528508076644	advanced_samples/common_native/CMakeFiles/common-native-gles3.dir/src/Text.cpp.o	983352205ab96fcf
+446	54998	7534528509517172	advanced_samples/common_native/CMakeFiles/common-native-gles3.dir/src/Texture.cpp.o	a5e1345ee403fc79
+495	55036	7534528509138435	advanced_samples/Translucency/CMakeFiles/Translucency.dir/jni/common/primitives.cpp.o	9e97ace7c12426f0
+18870	55277	7534528513169203	advanced_samples/Translucency/CMakeFiles/Translucency.dir/jni/common/shader.cpp.o	9e200da58e1742f
+9417	55619	7534528516886509	advanced_samples/Translucency/CMakeFiles/Translucency.dir/jni/common/meshloader.cpp.o	2f990990fdad7553
+5867	55724	7534528518466574	advanced_samples/Translucency/CMakeFiles/Translucency.dir/jni/app.cpp.o	c696959b876e345b
+489	55832	7534528518476542	advanced_samples/Translucency/CMakeFiles/Translucency.dir/jni/common/glutil.cpp.o	853dfa20f902b77
+54998	58460	7534528534866285	advanced_samples/common_native/libcommon-native-gles3.a	682620f74be04186
+58461	59904	7534528560189485	../../../../build/intermediates/cxx/Debug/2e50581a/obj/arm64-v8a/libNative.so	a9612f8cb23d406e

@@ -1,0 +1,43 @@
+{
+  "buildFiles": [
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\CMakeLists.txt",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\common_native\\CMakeLists.txt",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\CMakeLists.txt",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\CMakeLists.txt",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\Sample.cmake"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "E:\\Android_Studio\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\.cxx\\Debug\\4w2pc5l1\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "E:\\Android_Studio\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\.cxx\\Debug\\4w2pc5l1\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "Translucency::@db4dfb70e94739ca910b": {
+      "artifactName": "Translucency",
+      "abi": "arm64-v8a",
+      "output": "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\build\\intermediates\\cxx\\Debug\\4w2pc5l1\\obj\\arm64-v8a\\libNative.so",
+      "runtimeFiles": []
+    },
+    "common-native::@627c3e00baf88f12f79b": {
+      "artifactName": "common-native",
+      "abi": "arm64-v8a",
+      "output": "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\.cxx\\Debug\\4w2pc5l1\\arm64-v8a\\advanced_samples\\common_native\\libcommon-native.a",
+      "runtimeFiles": []
+    },
+    "common-native-gles3::@627c3e00baf88f12f79b": {
+      "artifactName": "common-native-gles3",
+      "abi": "arm64-v8a",
+      "output": "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\.cxx\\Debug\\4w2pc5l1\\arm64-v8a\\advanced_samples\\common_native\\libcommon-native-gles3.a",
+      "runtimeFiles": []
+    }
+  }
+}

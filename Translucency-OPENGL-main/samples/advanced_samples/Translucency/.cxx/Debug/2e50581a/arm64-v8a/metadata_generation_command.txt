@@ -1,0 +1,24 @@
+                        -HE:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_SYSTEM_VERSION=21
+-DANDROID_PLATFORM=android-21
+-DANDROID_ABI=arm64-v8a
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
+-DANDROID_NDK=E:\Android_Studio\SDK\ndk\26.1.10909125
+-DCMAKE_ANDROID_NDK=E:\Android_Studio\SDK\ndk\26.1.10909125
+-DCMAKE_TOOLCHAIN_FILE=E:\Android_Studio\SDK\ndk\26.1.10909125\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=E:\Android_Studio\SDK\cmake\3.22.1\bin\ninja.exe
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=E:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples\advanced_samples\Translucency\build\intermediates\cxx\Debug\2e50581a\obj\arm64-v8a
+-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=E:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples\advanced_samples\Translucency\build\intermediates\cxx\Debug\2e50581a\obj\arm64-v8a
+-BE:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples\advanced_samples\Translucency\.cxx\Debug\2e50581a\arm64-v8a
+-GNinja
+-DANDROID_TOOLCHAIN=clang
+-DANDROID_STL=c++_static
+-DANDROID_ARM_MODE=arm
+-DANDROID_NATIVE_API_LEVEL=23
+-DANDROID_CPP_FEATURES=exceptions
+-DFILTER_TARGET=Translucency
+-DCMAKE_BUILD_TYPE=Debug
+                        Build command args: []
+                        Version: 2

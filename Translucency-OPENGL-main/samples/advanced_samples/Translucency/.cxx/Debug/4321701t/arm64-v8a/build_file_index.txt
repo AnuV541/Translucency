@@ -1,0 +1,5 @@
+E:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples\advanced_samples\CMakeLists.txt
+E:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples\advanced_samples\common_native\CMakeLists.txt
+E:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples\advanced_samples\Translucency\CMakeLists.txt
+E:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples\CMakeLists.txt
+E:\Translucency-OPENGL-main\Translucency-OPENGL-main\samples\Sample.cmake

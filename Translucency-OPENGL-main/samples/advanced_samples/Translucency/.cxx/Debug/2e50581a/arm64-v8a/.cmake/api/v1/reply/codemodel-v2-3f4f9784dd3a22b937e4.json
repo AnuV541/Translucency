@@ -1,0 +1,126 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "advanced_samples",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-advanced_samples-Debug-ddd6da1a98c0bd3f6882.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "advanced_samples"
+				},
+				{
+					"build" : "advanced_samples/common_native",
+					"jsonFile" : "directory-advanced_samples.common_native-Debug-872c541bd423040632cf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "advanced_samples/common_native",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				},
+				{
+					"build" : "advanced_samples/Translucency",
+					"jsonFile" : "directory-advanced_samples.Translucency-Debug-1ae9ff411061e5167bf4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "advanced_samples/Translucency",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "mali-android-samples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "Translucency::@db4dfb70e94739ca910b",
+					"jsonFile" : "target-Translucency-Debug-d729398b7fb4c9862af8.json",
+					"name" : "Translucency",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "common-native::@627c3e00baf88f12f79b",
+					"jsonFile" : "target-common-native-Debug-9cdc6d948cad45af0739.json",
+					"name" : "common-native",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "common-native-gles3::@627c3e00baf88f12f79b",
+					"jsonFile" : "target-common-native-gles3-Debug-ddc19565b74e43535a57.json",
+					"name" : "common-native-gles3",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Translucency-OPENGL-main/Translucency-OPENGL-main/samples/advanced_samples/Translucency/.cxx/Debug/2e50581a/arm64-v8a",
+		"source" : "E:/Translucency-OPENGL-main/Translucency-OPENGL-main/samples"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

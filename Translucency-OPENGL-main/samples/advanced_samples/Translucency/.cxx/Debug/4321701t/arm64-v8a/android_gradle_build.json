@@ -1,0 +1,54 @@
+{
+  "buildFiles": [
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\CMakeLists.txt",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\common_native\\CMakeLists.txt",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\CMakeLists.txt",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\CMakeLists.txt",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\Sample.cmake"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "E:\\Android_Studio\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\.cxx\\Debug\\4321701t\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "E:\\Android_Studio\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\.cxx\\Debug\\4321701t\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "Translucency::@db4dfb70e94739ca910b": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "Translucency",
+      "output": "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\build\\intermediates\\cxx\\Debug\\4321701t\\obj\\arm64-v8a\\libNative.so",
+      "runtimeFiles": []
+    },
+    "common-native::@627c3e00baf88f12f79b": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "common-native",
+      "output": "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\.cxx\\Debug\\4321701t\\arm64-v8a\\advanced_samples\\common_native\\libcommon-native.a"
+    },
+    "common-native-gles3::@627c3e00baf88f12f79b": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "common-native-gles3",
+      "output": "E:\\Translucency-OPENGL-main\\Translucency-OPENGL-main\\samples\\advanced_samples\\Translucency\\.cxx\\Debug\\4321701t\\arm64-v8a\\advanced_samples\\common_native\\libcommon-native-gles3.a"
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "E:\\Android_Studio\\SDK\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "E:\\Android_Studio\\SDK\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

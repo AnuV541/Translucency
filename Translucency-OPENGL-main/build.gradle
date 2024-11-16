@@ -1,0 +1,33 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    //minPlatformGles2 = 12
+    minPlatformGles3 = 21
+    minPlatformGles32 = 24
+}
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    configurations.all {
+        resolutionStrategy {
+            force "org.jetbrains.kotlin:kotlin-stdlib:1.8.10"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.5.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
