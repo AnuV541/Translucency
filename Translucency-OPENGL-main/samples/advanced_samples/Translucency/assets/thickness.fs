@@ -22,23 +22,31 @@
 
 precision highp float;
 
-uniform sampler2D depthTexture;    // Previous depth texture
+// Output declarations to match the original pixel local storage structure
+layout(location = 0) out vec4 outLighting;
+layout(location = 1) out vec2 outMinMaxDepth;
+layout(location = 2) out vec4 outAlbedo;
+layout(location = 3) out vec2 outNormalXY;
+
+// Original uniforms
+uniform vec3 albedo;
+
+// Original inputs
 in vec4 vPosition;
 in vec3 vNormal;
-in vec2 vTexCoord;
-
-// Output updated depth information
-layout(location = 0) out vec4 outDepth;
 
 void main()
 {
-    // Get the current depth values from the depth texture
-    vec4 currentDepth = texture(depthTexture, vTexCoord);
-    
-    // Calculate new depth
     float depth = -vPosition.z;
-    
-    // Keep the minimum depth from the original texture (x component)
-    // and update the maximum depth (y component)
-    outDepth = vec4(currentDepth.x, max(depth, currentDepth.y), 0.0, 1.0);
+
+    // Load existing minMaxDepth.y value
+    float currentMaxDepth = outMinMaxDepth.y;
+
+    // Update only minMaxDepth.y while preserving other values
+    outMinMaxDepth = vec2(outMinMaxDepth.x, max(depth, currentMaxDepth));
+
+    // Keep other outputs unchanged to maintain their current values
+    outLighting = outLighting;
+    outAlbedo = outAlbedo;
+    outNormalXY = outNormalXY;
 }

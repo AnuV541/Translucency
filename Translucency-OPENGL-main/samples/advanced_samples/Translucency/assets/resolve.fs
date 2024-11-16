@@ -18,19 +18,28 @@
  * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-
 precision mediump float;
 
-// Vertex positions for a full-screen quad
-in vec2 position;
+// Input textures from previous passes
+uniform sampler2D lightingTexture;   // rgb10_a2 format
+uniform sampler2D minMaxDepthTexture; // rg16f format
+uniform sampler2D albedoTexture;      // rgb10_a2 format
+uniform sampler2D normalXYTexture;    // rg16f format
 
-// Output texture coordinates
-out vec2 vTexCoord;
+uniform float zNear;
+uniform float zFar;
 
-void main() {
-    // Convert position to texture coordinates
-    vTexCoord = position * 0.5 + 0.5;
-    
-    // Output vertex position
-    gl_Position = vec4(position, 0.0, 1.0);
+in vec2 vTexCoord; // UV coordinates from vertex shader
+out vec4 outColor;
+
+void main()
+{
+    // Sample the lighting texture at the current fragment position
+    vec4 lighting = texture(lightingTexture, vTexCoord);
+
+    // Write accumulated lighting back to framebuffer
+    // with gamma correction (gamma of 2.0)
+    outColor.rgb = sqrt(lighting.rgb);
+    // Alpha lighting is unused
+    outColor.a = 1.0;
 }

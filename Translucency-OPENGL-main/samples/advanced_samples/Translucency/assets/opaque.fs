@@ -21,6 +21,12 @@
 
 precision highp float;
 
+// Output variables to replace pixel local storage
+out vec4 outLighting;
+out vec2 outMinMaxDepth;
+out vec4 outAlbedo;
+out vec2 outNormalXY;
+
 in vec4 vPosition;
 in vec3 vNormal;
 
@@ -30,12 +36,6 @@ uniform vec3 lightCol0;
 uniform vec3 lightCol1;
 uniform float lightInt0;
 uniform float lightInt1;
-
-// Multiple render target outputs
-layout(location = 0) out vec4 outLighting;
-layout(location = 1) out vec4 outDepth;    // Using vec4 instead of vec2
-layout(location = 2) out vec4 outAlbedo;
-layout(location = 3) out vec4 outNormal;   // Using vec4 instead of vec2
 
 vec3 lambert(vec3 P, vec3 Lp, vec3 N, vec3 Ldiff, float Li)
 {
@@ -53,13 +53,10 @@ void main()
     vec3 N = normalize(vNormal);
 
     /* Procedural checkerpatterns! :D
-
     1: Take your floor coordinates modulo some size.
     This will make the coordinates loop in the range [0, size).
-
     2: Divide the looped coordinates by the size, to normalize
     to the range [0, 1).
-
     3: Create smooth transitions between edges along both axes.
     The parameter d determines how smooth the transition is.
      ______ ______
@@ -69,10 +66,8 @@ void main()
     |      |      |   11 ~ fx = 1 and fz = 1
     |  01  |  11  |
     |______|______|
-
     Here: fx = 0 when x is on the left, and fx = 1 when x is on the right.
     It is a blend when x is in the middle.
-
     4: Select out the pattern. We want white where fx and fy are both 0
     or both 1. That is, when fx * fz + (1.0 - fx) * (1.0 - fz) is 1.
     */
@@ -92,9 +87,9 @@ void main()
     color += lambert(P, lightPos1, N, lightCol1, lightInt1);
     color *= (pattern + 0.2 * (1.0 - pattern)) * ao;
 
-    // Store all the G-buffer data
+    // Output to regular fragment outputs instead of pixel local storage
     outLighting = vec4(color, 1.0);
-    outDepth = vec4(-vPosition.z, -vPosition.z, 0.0, 1.0);  // Storing min/max depth
-    outAlbedo = vec4(pattern); // Using pattern as albedo, modify as needed
-    outNormal = vec4(N.xy, 0.0, 1.0);  // Storing normal xy components
+    outMinMaxDepth = vec2(0.0); // You might need to set appropriate values here
+    outAlbedo = vec4(0.0);      // You might need to set appropriate values here
+    outNormalXY = vec2(0.0);    // You might need to set appropriate values here
 }

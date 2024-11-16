@@ -21,23 +21,21 @@
 
 precision highp float;
 
+// Define layout locations to match the original storage structure order
+layout(location = 0) out vec4 outLighting;    // rgb10_a2 format
+layout(location = 1) out vec2 outMinMaxDepth; // rg16f format
+layout(location = 2) out vec4 outAlbedo;     // rgb10_a2 format
+layout(location = 3) out vec2 outNormalXY;   // rg16f format
+
 uniform vec3 albedo;
 in vec4 vPosition;
 in vec3 vNormal;
 
-// Multiple render targets for G-buffer
-layout(location = 0) out vec4 outLighting;
-layout(location = 1) out vec4 outDepth;    // Using vec4 instead of vec2 due to WebGL limitations
-layout(location = 2) out vec4 outAlbedo;
-layout(location = 3) out vec4 outNormal;   // Using vec4 instead of vec2 due to WebGL limitations
-
 void main()
 {
     vec3 n = normalize(vNormal);
-    
-    // Output to G-buffer textures
     outLighting = vec4(0.0);
-    outDepth = vec4(-vPosition.z, -vPosition.z, 0.0, 1.0);
+    outMinMaxDepth = vec2(-vPosition.z, -vPosition.z);
     outAlbedo = vec4(albedo, sign(n.z));
-    outNormal = vec4(n.xy, 0.0, 1.0);
+    outNormalXY = n.xy;
 }
